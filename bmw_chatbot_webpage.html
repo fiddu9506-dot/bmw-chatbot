@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW Customer Support Chatbot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 28px 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 8px; }
+    header p { margin: 0; color: #ddd; }
+    main {
+      max-width: 900px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 3px 14px rgba(0,0,0,.08);
+      margin-bottom: 22px;
+    }
+    .card h2 { margin-top: 0; }
+    ul { line-height: 1.8; }
+    .chat-note {
+      text-align: center;
+      color: #555;
+      margin-top: 18px;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+</head>
+<body>
+  <header>
+    <h1>BMW Customer Support Chatbot</h1>
+    <p>AI-powered assistance for BMW vehicle queries</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Welcome</h2>
+      <p>
+        Use the BMW Customer Support chatbot below to ask about BMW vehicles,
+        features, prices, comparisons, and test drives.
+      </p>
+      <ul>
+        <li>BMW vehicle information</li>
+        <li>Vehicle features</li>
+        <li>Vehicle prices</li>
+        <li>BMW vs competitor comparisons</li>
+        <li>Test-drive requests with date and time</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Chat with BMW Customer Support</h2>
+      <p>Click the chat button and type your question.</p>
+      <df-messenger
+        intent="WELCOME"
+        chat-title="BMW Customer Support"
+        agent-id="bcd139fa-b4d7-4bfe-9516-d304222a3ba8"
+        language-code="en">
+      </df-messenger>
+      <p class="chat-note">Try: “Tell me about BMW X5”</p>
+    </section>
+  </main>
+
+  <footer>
+    BMW Customer Support Chatbot — Dialogflow ES Project
+  </footer>
+</body>
+</html>
